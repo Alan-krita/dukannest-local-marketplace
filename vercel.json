@@ -1,28 +1,10 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "backend": {
-      "root": "Backend",
-      "framework": "fastapi",
-      "entrypoint": "main:app"
-    },
-    "frontend": {
-      "root": "Frontend",
-      "framework": "vite"
-    }
-  },
+  "buildCommand": "cd Frontend && pnpm install && pnpm run build",
+  "outputDirectory": "Frontend/dist",
   "rewrites": [
     {
-      "source": "/api/v1/(.*)",
-      "destination": {
-        "service": "backend"
-      }
-    },
-    {
       "source": "/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
+      "destination": "/index.html"
     }
   ]
 }

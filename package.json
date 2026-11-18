@@ -5,8 +5,7 @@
   "description": "DukanNest - Where Local Shops Feel at Home | Full-Stack Local Commerce Marketplace",
   "scripts": {
     "dev": "npm --prefix Frontend run dev",
-    "dev:frontend": "npm --prefix Frontend run dev",
-    "build": "npm --prefix Frontend run build",
+    "build": "cd Frontend && npm install && npm run build",
     "preview": "npm --prefix Frontend run preview"
   }
 }
