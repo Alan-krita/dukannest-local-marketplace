@@ -43,16 +43,20 @@ def home():
 
 
 @app.get("/health", tags=["Health"])
+@app.get("/api/v1/health", tags=["Health"])
 def health_check():
     """
     Health check endpoint verifying application and database reachability.
-    Does not expose sensitive credentials.
     """
-    db_alive = check_db_connection()
-    return {
-        "status": "healthy",
-        "database": "connected" if db_alive else "disconnected"
-    }
+    import traceback
+    try:
+        from app.db.session import engine
+        from sqlalchemy import text
+        with engine.connect() as conn:
+            conn.execute(text("SELECT 1"))
+        return {"status": "healthy", "database": "connected"}
+    except Exception as e:
+        return {"status": "error", "error": str(e), "traceback": traceback.format_exc()}
 
 
 # Include API routers under /api/v1
