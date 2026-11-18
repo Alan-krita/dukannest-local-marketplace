@@ -4,20 +4,9 @@
     "web": {
       "root": "Frontend",
       "framework": "vite"
-    },
-    "api": {
-      "root": "Backend",
-      "framework": "fastapi",
-      "entrypoint": "main:app"
     }
   },
   "rewrites": [
-    {
-      "source": "/api/v1/(.*)",
-      "destination": {
-        "service": "api"
-      }
-    },
     {
       "source": "/(.*)",
       "destination": {
