@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="craftBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF5FF" />
+      <stop offset="100%" stop-color="#F3E8FF" />
+    </linearGradient>
+    <linearGradient id="potteryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2410C" />
+      <stop offset="50%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#9A3412" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#craftBg)"/>
+  <ellipse cx="200" cy="260" rx="140" ry="25" fill="#E2E8F0" />
+  <!-- Main Ceramic Vase -->
+  <path d="M175 100 Q160 160 140 190 Q125 215 150 240 L250 240 Q275 215 260 190 Q240 160 225 100 Z" fill="url(#potteryGrad)" />
+  <ellipse cx="200" cy="100" rx="25" ry="8" fill="#7C2D12" />
+  <ellipse cx="200" cy="98" rx="22" ry="6" fill="#EA580C" />
+  <!-- Pattern on Vase -->
+  <path d="M150 190 Q200 200 250 190" stroke="#FED7AA" stroke-width="4" fill="none" stroke-linecap="round" />
+  <path d="M155 205 Q200 215 245 205" stroke="#FED7AA" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="4,6" />
+  <!-- Small Cup -->
+  <path d="M260 210 L290 210 L285 245 L265 245 Z" fill="#0D9488" />
+  <!-- Craft Corner Badge -->
+  <rect x="135" y="30" width="130" height="32" rx="16" fill="#7C3AED" />
+  <text x="200" y="51" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Craft Corner</text>
+</svg>

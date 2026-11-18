@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="candleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7" />
+      <stop offset="100%" stop-color="#F3E8DC" />
+    </linearGradient>
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6B7" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#F59E0B" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="glassJar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#CA8A04" stop-opacity="0.8" />
+      <stop offset="20%" stop-color="#EAB308" stop-opacity="0.4" />
+      <stop offset="80%" stop-color="#CA8A04" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#854D0E" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="waxFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF9C3" />
+      <stop offset="100%" stop-color="#FEF08A" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#candleBg)"/>
+  <ellipse cx="200" cy="265" rx="170" ry="25" fill="#E7D8C9" />
+  <ellipse cx="200" cy="260" rx="150" ry="18" fill="#D9C5B2" />
+  <circle cx="200" cy="105" r="55" fill="url(#flameGlow)" />
+  <rect x="145" y="120" width="110" height="125" rx="16" fill="url(#glassJar)" />
+  <rect x="150" y="132" width="100" height="105" rx="10" fill="url(#waxFill)" />
+  <rect x="160" y="155" width="80" height="60" rx="4" fill="#FFFDF9" stroke="#D4A373" stroke-width="1.5" />
+  <text x="200" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="bold" fill="#4A3E3D" text-anchor="middle">THE CANDLE CO.</text>
+  <line x1="175" y1="182" x2="225" y2="182" stroke="#D4A373" stroke-width="1" />
+  <text x="200" y="194" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#78716C" text-anchor="middle">Handmade Soy Wax</text>
+  <text x="200" y="204" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#059669" font-weight="600" text-anchor="middle">Lavender &amp; Sage</text>
+  <line x1="200" y1="132" x2="200" y2="115" stroke="#451A03" stroke-width="3" stroke-linecap="round" />
+  <path d="M200 85 C205 98 212 108 206 116 C202 121 198 121 194 116 C188 108 195 98 200 85 Z" fill="#F59E0B" />
+  <path d="M200 95 C203 103 207 109 203 114 C201 116 199 116 197 114 C193 109 197 103 200 95 Z" fill="#FEF08A" />
+  <ellipse cx="200" cy="115" rx="2.5" ry="3" fill="#38BDF8" opacity="0.8" />
+  <path d="M270 240 Q285 180 295 130" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <circle cx="292" cy="140" r="5" fill="#8B5CF6" />
+  <circle cx="288" cy="155" r="5" fill="#A78BFA" />
+  <circle cx="283" cy="172" r="5" fill="#8B5CF6" />
+  <circle cx="278" cy="190" r="5" fill="#A78BFA" />
+  <circle cx="274" cy="208" r="5" fill="#8B5CF6" />
+</svg>

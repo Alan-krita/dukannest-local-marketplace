@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" />
+      <stop offset="100%" stop-color="#065F46" />
+    </linearGradient>
+    <radialGradient id="warmLight" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#064E3B" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#heroBg)"/>
+  <rect width="600" height="400" fill="url(#warmLight)"/>
+  <!-- Decorative shelves in background -->
+  <rect x="50" y="100" width="500" height="8" rx="4" fill="#047857" opacity="0.6"/>
+  <rect x="80" y="180" width="450" height="8" rx="4" fill="#047857" opacity="0.6"/>
+  <!-- Artisan Jars and Vases on shelves -->
+  <rect x="90" y="65" width="25" height="35" rx="4" fill="#F59E0B" opacity="0.8"/>
+  <rect x="130" y="55" width="30" height="45" rx="6" fill="#10B981" opacity="0.8"/>
+  <rect x="180" y="70" width="20" height="30" rx="3" fill="#EC4899" opacity="0.8"/>
+  <!-- Central Artisan Figure (Silhouette / Stylized) -->
+  <ellipse cx="320" cy="140" rx="35" ry="42" fill="#FDE68A"/> <!-- Head -->
+  <path d="M260 210 Q320 180 380 210 L370 360 L270 360 Z" fill="#059669"/> <!-- Apron -->
+  <path d="M275 220 L365 220 L355 350 L285 350 Z" fill="#047857"/> <!-- Inner Apron -->
+  <!-- Holding Gift Box / Produce Basket -->
+  <rect x="270" y="240" width="100" height="70" rx="8" fill="#F59E0B"/>
+  <path d="M270 270 L370 270" stroke="#B45309" stroke-width="4"/>
+  <path d="M320 240 L320 310" stroke="#B45309" stroke-width="4"/>
+  <!-- Floating leaf sprouts -->
+  <path d="M120 280 C110 250 140 240 140 240 C140 240 130 270 120 280" fill="#34D399"/>
+  <path d="M480 260 C470 230 500 220 500 220 C500 220 490 250 480 260" fill="#34D399"/>
+  <text x="300" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="bold" fill="#A7F3D0" text-anchor="middle">Empowering Local Makers &amp; Neighborhood Creators</text>
+</svg>
