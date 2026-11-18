@@ -205,8 +205,9 @@ export default function Products() {
       const c = p.shop_city || p.city;
       if (c) set.add(c.trim());
     });
+    if (selectedCity && selectedCity !== 'All') set.add(selectedCity);
     return ['All', ...Array.from(set).sort()];
-  }, [products]);
+  }, [products, selectedCity]);
 
   const availableLocalities = useMemo(() => {
     const set = new Set();
@@ -214,8 +215,9 @@ export default function Products() {
       const loc = p.shop_locality || p.locality;
       if (loc) set.add(loc.trim());
     });
+    if (selectedLocality && selectedLocality !== 'All') set.add(selectedLocality);
     return ['All', ...Array.from(set).sort()];
-  }, [products]);
+  }, [products, selectedLocality]);
 
   const handleClearFilters = () => {
     setSelectedCategory('All');
@@ -232,6 +234,27 @@ export default function Products() {
     setSelectedCity('All');
     setSelectedLocality('All');
     setSelectedPincode('');
+    const next = new URLSearchParams(searchParams);
+    next.delete('locality');
+    next.delete('city');
+    next.delete('pincode');
+    setSearchParams(next);
+  };
+
+  const handleLocalityChange = (val) => {
+    setSelectedLocality(val);
+    const next = new URLSearchParams(searchParams);
+    if (val === 'All') next.delete('locality');
+    else next.set('locality', val);
+    setSearchParams(next);
+  };
+
+  const handleCityChange = (val) => {
+    setSelectedCity(val);
+    const next = new URLSearchParams(searchParams);
+    if (val === 'All') next.delete('city');
+    else next.set('city', val);
+    setSearchParams(next);
   };
 
   const filteredProducts = useMemo(() => {
@@ -339,7 +362,7 @@ export default function Products() {
               <label className="filter-field-label">Locality / Area</label>
               <select
                 value={selectedLocality}
-                onChange={(e) => setSelectedLocality(e.target.value)}
+                onChange={(e) => handleLocalityChange(e.target.value)}
                 className="filter-select-element"
               >
                 {availableLocalities.map((loc) => (
@@ -354,7 +377,7 @@ export default function Products() {
               <label className="filter-field-label">City / Region</label>
               <select
                 value={selectedCity}
-                onChange={(e) => setSelectedCity(e.target.value)}
+                onChange={(e) => handleCityChange(e.target.value)}
                 className="filter-select-element"
               >
                 {availableCities.map((city) => (
