@@ -1,14 +1,28 @@
 {
-  "buildCommand": "pnpm --prefix Frontend run build",
-  "outputDirectory": "Frontend/dist",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "backend": {
+      "root": "Backend",
+      "framework": "fastapi",
+      "entrypoint": "main:app"
+    },
+    "frontend": {
+      "root": "Frontend",
+      "framework": "vite"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/v1/(.*)",
-      "destination": "/api/index.py"
+      "destination": {
+        "service": "backend"
+      }
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": {
+        "service": "frontend"
+      }
     }
   ]
 }
